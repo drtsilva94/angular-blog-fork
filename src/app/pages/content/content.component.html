@@ -1,15 +1,28 @@
+
+
+<!-- Container principal -->
 <div class="container__content">
-  <div class="content__cover">
-    <img src="{{ photoCover }}" alt="" srcset="">
+  <!-- Grid de Fotos estilo Instagram -->
+  <div class="photo-grid" *ngIf="photoGallery && photoGallery.length > 0">
+    <!-- Itera sobre cada foto da galeria -->
+    <div class="photo-item" *ngFor="let photo of photoGallery; let i = index" (click)="showComment(i)">
+      <!-- Exibe a imagem na grid com tamanho maior -->
+      <img [src]="photo.src" alt="{{ photo.alt }}" class="large-photo">
+    </div>
   </div>
-  <div class="content__title">
-    <h1>{{ contentTitle }}</h1>
-    <hr />
+
+  <!-- Modal para exibir o comentário ao clicar na foto -->
+  <div *ngIf="selectedPhoto" class="photo-modal" (click)="closeComment()">
+    <div class="modal-content">
+      <!-- Imagem selecionada -->
+      <img [src]="selectedPhoto.src" alt="Foto selecionada">
+      <!-- Comentário sobre a foto selecionada -->
+      <p>{{ selectedPhoto.comment }}</p>
+    </div>
   </div>
-  <div class="content__description">
-    <a [routerLink]="['']"> << VOLTAR </a>
-    <p>
-      {{ contentDescription }}
-    </p>
+
+  <!-- Botão de Voltar centralizado abaixo de tudo -->
+  <div class="back-button">
+    <a [routerLink]="['']"><< VOLTAR </a>
   </div>
 </div>

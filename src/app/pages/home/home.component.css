@@ -1,11 +1,51 @@
-.container__articles{
-  margin-top: 30px;
-
-  @media(min-width: 700px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+/* Container principal para exibir os componentes lado a lado */
+.container__articles {
+  display: flex; /* Alinha os componentes horizontalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  gap: 20px; /* Espaçamento entre os componentes */
+  padding: 20px; /* Espaçamento interno */
+  flex-wrap: wrap; /* Permite quebra em telas menores */
 }
 
+/* Estilo para os cartões */
+.app-small-card {
+  width: 280px; /* Largura fixa */
+  height: auto; /* Altura ajustável */
+  border-radius: 8px; /* Borda arredondada */
+  overflow: hidden; /* Evita que o conteúdo ultrapasse */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+  text-align: center; /* Centraliza o texto */
+}
 
+/* Imagem nos cartões */
+.app-small-card img {
+  width: 100%; /* Ocupa toda a largura do cartão */
+  height: 300px; /* Altura fixa para uniformizar as fotos */
+  object-fit: cover; /* Garante corte proporcional */
+  border-radius: 8px; /* Borda arredondada */
+}
+
+/* Título abaixo da imagem */
+.app-small-card h3 {
+  margin-top: 10px; /* Espaçamento superior */
+  font-size: 1.2em; /* Tamanho do texto */
+  color: white; /* Cor do texto */
+}
+
+/* Remover linhas entre os componentes */
+.container__articles::after {
+  content: none; /* Remove qualquer linha residual */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container__articles {
+    flex-direction: column; /* Alinha em coluna em telas pequenas */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .app-small-card {
+    width: 90%; /* Ocupa 90% da largura disponível */
+  }
+}

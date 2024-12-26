@@ -1,29 +1,50 @@
-.container__content{
-
+/* Container principal */
+.container__content {
   width: 100%;
-  height: 100vh;
-
   margin-top: 20px;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
 
-.content__cover > img{
-  border:5px solid rgb(144, 144, 144);
-  border-radius: 5px;
-  width: 500px;
-  min-width: 500px;
-  height: 300px;
-}
-
-.content__description{
-  margin-top: 15px;
-}
-
-.content__description > p{
+/* Grid de Fotos */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  gap: 15px; /* Espaçamento entre as fotos */
+  padding: 20px;
   margin-top: 20px;
-  color: rgb(198, 197, 197);
+  width: 90%;
+}
+
+/* Itens do Grid */
+.photo-item img {
+  width: 100%; /* Largura ocupa 100% da célula */
+  height: 400px; /* Aumenta a altura das fotos */
+  object-fit: cover; /* Ajusta proporcionalmente */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid rgb(144, 144, 144); /* Borda */
+}
+
+/* Efeito ao passar o mouse */
+.photo-item img:hover {
+  transform: scale(1.1); /* Zoom suave ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
+}
+
+/* Botão de Voltar */
+.back-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-button a {
+  color: lightblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button a:hover {
+  color: rgb(144, 238, 255); /* Altera a cor ao passar o mouse */
 }
