@@ -1,12 +1,71 @@
-
-
-.container__menu-bar > ul{
-  display: flex;
-  flex-direction: row;
+/* Barra de navegação fixa no topo */
+.menu-bar {
+  position: fixed; /* Fixa no topo */
+  top: 0; /* Sem margem superior */
+  left: 0; /* Sem margem esquerda */
+  width: 100%; /* Ocupa toda a largura */
+  height: 60px; /* Altura padrão */
+  background-color: #6c63ff; /* Cor de fundo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  z-index: 1000; /* Sobrepõe os outros elementos */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+  padding: 0 20px; /* Espaçamento interno */
 }
 
-.container__menu-bar > ul > li{
-  margin-right: 20px;
-  list-style: none;
+/* Remover barra de rolagem horizontal na página */
+body {
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove padding padrão */
+  overflow-x: hidden; /* Remove rolagem horizontal */
 }
 
+/* Lista de links */
+.menu-list {
+  list-style: none; /* Remove os marcadores */
+  display: flex; /* Layout horizontal */
+  gap: 30px; /* Espaçamento entre itens */
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo dos links */
+.menu-list a {
+  text-decoration: none; /* Remove sublinhado */
+  color: white; /* Cor do texto */
+  font-size: 1em; /* Tamanho do texto */
+  font-weight: bold; /* Texto em negrito */
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 5px; /* Borda arredondada */
+  transition: background-color 0.3s ease; /* Efeito de transição no hover */
+}
+
+/* Efeito hover */
+.menu-list a:hover {
+  background-color: #4a4a8a; /* Cor mais escura ao passar o mouse */
+}
+
+/* Link ativo (opcional, para destacar a seção atual) */
+.menu-list a.active {
+  background-color: #4a4a8a; /* Cor destacada */
+  color: #ffd700; /* Texto dourado */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .menu-bar {
+    height: 70px; /* Altura maior */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    padding: 10px 0;
+  }
+
+  .menu-list {
+    flex-direction: row; /* Mantém os links na horizontal */
+    gap: 15px; /* Reduz espaço entre links */
+  }
+
+  .menu-list a {
+    font-size: 0.9em; /* Texto menor */
+  }
+}

@@ -1,0 +1,104 @@
+/* Container principal */
+.projects-container {
+  padding: 60px 30px; /* Espaçamento interno */
+  background-color: #f3f0ff; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto para legibilidade */
+  text-align: center; /* Centraliza o título e subtítulo */
+}
+
+/* Título */
+.projects-title {
+  font-size: 2.5em; /* Tamanho maior para destaque */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  color: #4a4a8a; /* Cor mais escura para contraste */
+}
+
+/* Subtítulo */
+.projects-subtitle {
+  font-size: 1.2em; /* Tamanho menor */
+  margin-bottom: 30px; /* Espaçamento inferior */
+  color: #6b6b83; /* Tom suave */
+}
+
+/* Estilo dos projetos */
+.project-item {
+  display: flex; /* Layout lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: 40px; /* Espaçamento inferior */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  background-color: #e8e4ff; /* Fundo interno mais claro */
+}
+
+/* Alternância de layout entre projetos */
+.project-item:nth-child(odd) {
+  flex-direction: row; /* Imagem à esquerda, texto à direita */
+}
+
+.project-item:nth-child(even) {
+  flex-direction: row-reverse; /* Imagem à direita, texto à esquerda */
+}
+
+/* Imagem do projeto */
+.project-image img {
+  width: 300px; /* Largura fixa */
+  height: auto; /* Altura ajustável */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Detalhes do projeto */
+.project-details {
+  padding: 20px; /* Espaçamento interno */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Nome do projeto */
+.project-name {
+  font-size: 1.5em; /* Tamanho do título */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  color: #4a4a8a; /* Cor mais escura */
+}
+
+/* Descrição */
+.project-description {
+  font-size: 1em; /* Tamanho do texto */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  margin-bottom: 15px; /* Espaçamento inferior */
+  color: #555; /* Cor suave para legibilidade */
+}
+
+/* Botões */
+.project-buttons {
+  margin-top: 15px; /* Espaçamento superior */
+}
+
+/* Estilo do botão */
+.btn-repo {
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 1em; /* Tamanho do texto */
+  text-decoration: none; /* Remove sublinhado */
+  color: white; /* Cor do texto */
+  background-color: #6c63ff; /* Cor principal do botão */
+  transition: all 0.3s; /* Animação */
+}
+
+.btn-repo:hover {
+  background-color: #4a4a8a; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column; /* Empilha imagem e texto */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .project-image img {
+    width: 100%; /* Ajusta a largura para preencher */
+  }
+
+  .project-details {
+    padding: 15px; /* Reduz o espaçamento */
+  }
+}

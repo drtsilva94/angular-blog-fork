@@ -1,24 +1,47 @@
+<!-- Menu Principal com Título -->
 <app-menu-title></app-menu-title>
 
+<!-- Seção Sobre Mim -->
+<section id="about"> <!-- Adiciona um ID para navegação -->
+  <app-about></app-about>
+</section>
+
+<!-- Seção Habilidades -->
+<section id="skills"> <!-- Adiciona um ID para navegação -->
+  <app-skills></app-skills>
+</section>
+
+<!-- Seção Projetos -->
+<section id="projects"> <!-- Adiciona um ID para navegação -->
+  <app-projects></app-projects>
+</section>
+
 <!-- Container para exibir os componentes lado a lado -->
-<div class="container__articles">
+<section id="photography"> <!-- Adiciona um ID para navegação -->
+  <div class="container__articles">
 
-  <!-- Componente 1 - Mar -->
-  <a [routerLink]="['/content', 2]" class="app-small-card">
-    <img src="assets/image/praia.png" alt="Água">
-    <h3>Mar</h3>
-  </a>
+    <!-- Componente 1 - Mar -->
+    <a [routerLink]="['/content', 2]" class="app-small-card">
+      <img src="assets/image/praia.png" alt="Água">
+      <h3>Água</h3>
+    </a>
 
-  <!-- Componente 2 - Animais fofinhos -->
-  <a [routerLink]="['/content', 3]" class="app-small-card">
-    <img src="assets/image/kenai1.png" alt="Animais fofinhos">
-    <h3>Animais fofinhos</h3>
-  </a>
+    <!-- Componente 2 - Animais fofinhos -->
+    <a [routerLink]="['/content', 3]" class="app-small-card">
+      <img src="assets/image/kenai1.png" alt="Animais fofinhos">
+      <h3>Animais fofinhos</h3>
+    </a>
 
-  <!-- Componente 3 - Montanhas -->
-  <a [routerLink]="['/content', 4]" class="app-small-card">
-    <img src="assets/image/cordilheira.png" alt="Montanhas">
-    <h3>Montanhas</h3>
-  </a>
+    <!-- Componente 3 - Montanhas -->
+    <a [routerLink]="['/content', 4]" class="app-small-card">
+      <img src="assets/image/cordilheira.png" alt="Montanhas">
+      <h3>Montanhas</h3>
+    </a>
 
-</div>
+  </div>
+</section>
+
+<!-- Seção de Contato -->
+<section id="contact"> <!-- Adiciona um ID para navegação -->
+  <app-contact></app-contact> <!-- Inclui o componente Contact aqui -->
+</section>

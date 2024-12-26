@@ -1,0 +1,117 @@
+/* Container principal */
+.contact-container {
+  width: 100vw; /* Ocupa 100% da largura da tela */
+  min-height: 100vh; /* Altura mínima ocupa toda a tela visível */
+  padding: 60px 20px; /* Espaçamento interno */
+  background-color: #f9f5eb; /* Cor de fundo */
+  display: flex; /* Centraliza o conteúdo vertical e horizontalmente */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Cabeçalho */
+.contact-header {
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Título */
+.contact-title {
+  font-size: 3em; /* Tamanho maior */
+  color: #333; /* Cor escura */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Subtítulo */
+.contact-subtitle {
+  font-size: 1.2em;
+  color: #666; /* Cor mais neutra */
+  margin-bottom: 30px;
+}
+
+/* Formulário */
+.contact-form {
+  width: 100%;
+  max-width: 600px; /* Largura máxima */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os campos */
+}
+
+/* Campos de entrada */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Campo de texto maior */
+.contact-form textarea {
+  height: 120px; /* Altura fixa */
+}
+
+/* Botão de envio */
+.contact-form button {
+  padding: 12px;
+  font-size: 1.1em;
+  background-color: #4caf50; /* Cor verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Efeito hover no botão */
+.contact-form button:hover {
+  background-color: #45a049; /* Tom mais escuro */
+}
+
+/* Links Sociais */
+.social-links {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social-links p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* Ícones sociais */
+.social-links .icons a {
+  font-size: 1.5em; /* Tamanho dos ícones */
+  margin: 0 10px; /* Espaçamento horizontal */
+  color: #4A90E2; /* Azul para os ícones */
+  transition: 0.3s;
+}
+
+/* Efeito hover nos ícones */
+.social-links .icons a:hover {
+  color: #357ABD; /* Cor mais escura ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px; /* Reduz o espaçamento em telas menores */
+  }
+
+  .contact-title {
+    font-size: 2.2em;
+  }
+
+  .contact-subtitle {
+    font-size: 1em;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9em;
+  }
+}

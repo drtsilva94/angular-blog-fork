@@ -30,7 +30,7 @@
 .app-small-card h3 {
   margin-top: 10px; /* Espaçamento superior */
   font-size: 1.2em; /* Tamanho do texto */
-  color: white; /* Cor do texto */
+  color: black; /* Cor do texto */
 }
 
 /* Remover linhas entre os componentes */

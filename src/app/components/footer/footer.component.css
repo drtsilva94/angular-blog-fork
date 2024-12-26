@@ -1,0 +1,9 @@
+/* Container do footer */
+.footer-container {
+  width: 100%;
+  background-color:MediumSlateBlue;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9em;
+}

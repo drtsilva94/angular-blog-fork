@@ -1,9 +1,36 @@
-<div class="container__menu-bar">
-  <ul>
-    <li><a href="https://www.linkedin.com/in/anna-duarte-da-silva-8257a0189/">Linkedin</a></li>
-    <li><span>•</span></li>
-    <li><a href="https://github.com/drtsilva94">Github</a></li>
-    <li><span>•</span></li>
-    <li><a href="https://www.instagram.com/duarteanna94/">Instagram</a></li>
+<!-- Barra de Navegação -->
+<nav class="menu-bar">
+  <!-- Lista de links para navegação -->
+  <ul class="menu-list">
+
+    <!-- Atalho para o componente 'Sobre Mim' -->
+    <li>
+      <!-- Usa 'id' correspondente ao componente 'about' -->
+      <a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'}); return false;">Sobre Mim</a>
+    </li>
+
+    <!-- Atalho para o componente 'Habilidades' -->
+    <li>
+      <!-- Navegação suave para o componente 'skills' -->
+      <a href="#skills" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'}); return false;">Habilidades</a>
+    </li>
+
+    <!-- Atalho para o componente 'Projetos' -->
+    <li>
+      <!-- Navegação suave para o componente 'projects' -->
+      <a href="#projects" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'}); return false;">Projetos</a>
+    </li>
+
+    <!-- Atalho para o componente 'Fotografia' -->
+    <li>
+      <!-- Navegação suave para o componente 'photography' -->
+      <a href="#photography" onclick="document.getElementById('photography').scrollIntoView({behavior: 'smooth'}); return false;">Fotografia</a>
+    </li>
+
+    <!-- Atalho para o componente 'Contato' -->
+    <li>
+      <!-- Navegação suave para o componente 'contact' -->
+      <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">Contato</a>
+    </li>
   </ul>
-</div>
+</nav>

@@ -1,14 +1,92 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos Globais e Importação de Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-  background-color: #111111;
-  color:white;
-  font-family: 'Open Sans', sans-serif;
+
+/* Reset global de margens, paddings e box-sizing */
+* {
+  margin: 0; /* Remove margens externas */
+  padding: 0; /* Remove padding interno */
+  box-sizing: border-box; /* Inclui bordas e paddings dentro do tamanho total */
+  color: black; /* Cor padrão do texto */
+  font-family: 'Open Sans', sans-serif; /* Fonte padrão */
 }
 
-a{
-  text-decoration: none;
+/* Estilo para links */
+a {
+  text-decoration: none; /* Remove sublinhado dos links */
+}
+
+/* Ajustes no HTML e Body */
+html, body {
+  width: 100%; /* Garante que ocupe toda a largura */
+  overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+  scroll-behavior: smooth; /* Rola suavemente ao clicar nos links */
+}
+
+/* Ajustes gerais para seções */
+section {
+  width: 100%; /* Garante que as seções ocupem toda a largura */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Ajustes específicos para a barra de navegação */
+.menu-bar {
+  position: fixed; /* Fixa no topo da página */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  height: 60px; /* Altura da barra */
+  background-color: #6c63ff; /* Cor de fundo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  z-index: 1000; /* Sobrepõe os outros elementos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajustes específicos para listas de navegação */
+.menu-list {
+  list-style: none; /* Remove marcadores */
+  display: flex; /* Layout em linha */
+  gap: 30px; /* Espaçamento entre itens */
+  padding: 0;
+}
+
+.menu-list a {
+  text-decoration: none; /* Remove sublinhado */
+  color: white; /* Cor do texto */
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Efeito suave */
+}
+
+.menu-list a:hover {
+  background-color: #4a4a8a; /* Cor ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-bar {
+    height: 70px; /* Altura maior */
+  }
+
+  .menu-list {
+    gap: 15px; /* Reduz espaço entre itens */
+  }
+
+  .menu-list a {
+    font-size: 0.9em; /* Texto menor */
+  }
+}
+
+/* Ajuste para remover margens e evitar barra horizontal */
+.container, .section, .content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Suaviza o scroll ao clicar nos links */
+html {
+  scroll-behavior: smooth;
 }

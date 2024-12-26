@@ -1,0 +1,85 @@
+/* Container principal */
+.skills-container {
+  width: 100vw; /* Ocupa toda a largura da tela */
+  padding: 60px 30px; /* Espaçamento interno */
+  background-color: #f5c6c6; /* Cor de fundo */
+  color: #4a4a4a; /* Cor do texto */
+  text-align: center; /* Centraliza o conteúdo */
+  font-family: 'Arial', sans-serif; /* Fonte padrão */
+}
+
+/* Título */
+.skills-title {
+  font-size: 2.5em; /* Tamanho do título */
+  color: #6c5b7b; /* Cor elegante */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Subtítulo */
+.skills-subtitle {
+  font-size: 1.5em;
+  color: #333; /* Cor neutra */
+  margin-bottom: 20px;
+}
+
+/* Descrição */
+.skills-description {
+  font-size: 1.1em;
+  color: #555; /* Cor suave */
+  margin-bottom: 40px;
+}
+
+/* Grid de habilidades */
+.skills-grid {
+  display: grid; /* Layout em grade */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Colunas responsivas */
+  gap: 20px; /* Espaçamento entre itens */
+  justify-items: center; /* Centraliza os itens na grade */
+}
+
+/* Itens das habilidades */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Ícones */
+.skill-item img {
+  width: 70px; /* Tamanho dos ícones */
+  height: 70px;
+  margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+  transition: transform 0.3s ease; /* Efeito de zoom */
+}
+
+.skill-item img:hover {
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Texto das habilidades */
+.skill-item span {
+  font-size: 1em;
+  color: #4a4a4a; /* Cor do texto */
+  font-weight: bold; /* Negrito */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 40px 20px; /* Espaçamento menor */
+  }
+
+  .skills-title {
+    font-size: 2em; /* Reduz o tamanho do título */
+  }
+
+  .skills-subtitle {
+    font-size: 1.2em; /* Reduz o tamanho do subtítulo */
+  }
+
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+  }
+}

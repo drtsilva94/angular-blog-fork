@@ -1,0 +1,71 @@
+/* Container principal */
+.about-container {
+  padding: 50px 20px; /* Espaçamento interno */
+  background-color: #fdf1e3; /* Cor de fundo semelhante ao exemplo */
+  border-radius: 8px; /* Bordas arredondadas */
+  color: #333; /* Cor do texto */
+}
+
+/* Título */
+.about-container h2 {
+  font-size: 2.5em; /* Tamanho do título */
+  color: #2a3b8b; /* Cor do título */
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Conteúdo principal */
+.about-content {
+  display: flex; /* Alinha horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center;
+  gap: 40px; /* Espaçamento entre os elementos */
+}
+
+/* Foto */
+.about-photo img {
+  width: 200px; /* Tamanho da foto */
+  height: 200px;
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Ajusta a imagem dentro do espaço */
+  border: 5px solid #e3e3e3; /* Borda ao redor */
+}
+
+/* Texto */
+.about-text {
+  max-width: 600px; /* Largura máxima do texto */
+  text-align: justify; /* Justifica o texto */
+  font-size: 1.1em; /* Tamanho da fonte */
+  line-height: 1.8; /* Espaçamento entre linhas */
+}
+
+/* Subtítulo */
+.about-text h3 {
+  color: #4a4a4a; /* Cor do subtítulo */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.about-text a {
+  color: #2a3b8b; /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold; /* Negrito */
+}
+
+.about-text a:hover {
+  color: #ff6600; /* Cor ao passar o mouse */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Alinha verticalmente em telas menores */
+  }
+
+  .about-photo img {
+    width: 150px;
+    height: 150px;
+  }
+}
